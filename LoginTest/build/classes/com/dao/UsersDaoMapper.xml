@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件-->
+<!--等于dao接口的实现，namespace属性值必须和接口的类路径一致-->
+<!--usersDao首字母小写是spring的唯一标识  -->
+<mapper namespace="com.dao.UsersDao"><!--/com/dao/UsersDao.java  -->
+	
+     <select id="findByUsername" parameterType="String" resultType="Users">
+     	select * from users where username=#{username}
+     
+     </select>
+</mapper>
